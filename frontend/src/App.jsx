@@ -14,7 +14,7 @@ export default function App(){
  const [page,setPage]=useState("dashboard"),[trip,setTrip]=useState(defaultTrip),[plan,setPlan]=useState(()=>JSON.parse(localStorage.getItem("tripbuddy-plan")||"null"));
  const [members,setMembers]=useState([{name:"You",preferences:["Heritage","Food","Nature"]},{name:"Aarav",preferences:["Nature","Food"]},{name:"Meera",preferences:["Heritage","Culture"]}]);
  const [toast,setToast]=useState(""); const [loading,setLoading]=useState(false); const [health,setHealth]=useState(false); const [mobile,setMobile]=useState(false);
- useEffect(()=>{fetch(`${API}/health`).then(r=>r.ok&&setHealth(true)).catch(()=>setHealth(false))},[]);
+ useEffect(()=>{fetch(`${API}/api/health`).then(r=>r.ok&&setHealth(true)).catch(()=>setHealth(false))},[]);
  useEffect(()=>{if(plan)localStorage.setItem("tripbuddy-plan",JSON.stringify(plan))},[plan]);
  useEffect(()=>{if(toast){let t=setTimeout(()=>setToast(""),3000);return()=>clearTimeout(t)}},[toast]);
  async function generate(){setLoading(true);setPage("agent");try{let r=await fetch(`${API}/trips/plan`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(trip)});let d=await r.json();setPlan(d.plan);setPage("itinerary");setToast("AI copilot finished your first-pass plan.")}catch{setToast("Backend unavailable — start the API on port 5050.");setPage("create")}finally{setLoading(false)}}
