@@ -1,0 +1,9 @@
+{
+  "name":"TripBuddy — Agentic Travel Copilot",
+  "short_name":"TripBuddy",
+  "start_url":"/",
+  "display":"standalone",
+  "background_color":"#07111f",
+  "theme_color":"#07111f",
+  "description":"SIH 2026 agentic AI travel planning demo by KaizenX"
+}
