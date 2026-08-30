@@ -62,5 +62,12 @@ app.get("/api/demo/weather", (_, res) => res.json({ ok:true, location:"Andhra Pr
   {day:"Day 3", icon:"⛅", temp:30, rain:28, label:"Partly cloudy"}
 ]}));
 
+export default app;
+
 const port = process.env.PORT || 5050;
-app.listen(port, () => console.log(`TripBuddy API running on http://localhost:${port}`));
+
+if (!process.env.VERCEL) {
+  app.listen(port, () =>
+    console.log(`TripBuddy API running on http://localhost:${port}`)
+  );
+}
