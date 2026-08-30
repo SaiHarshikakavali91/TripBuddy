@@ -1,7 +1,7 @@
 import React, {useEffect, useMemo, useState} from "react";
 import {ArrowRight, Bot, CalendarDays, Check, ChevronRight, CircleDollarSign, Compass, Download, Home, Map, Mic, Mountain, Navigation, Plus, RefreshCw, Sparkles, Split, Users, Wallet, Zap, CloudRain, Hotel, Plane, Utensils, ShieldCheck, Play, UserRound, Link2, Menu, X} from "lucide-react";
 
-const API = import.meta.env.VITE_API_URL || "https://tripbuddy-backend-o0txsdwyh-shi-db74.vercel.app";
+const API = import.meta.env.VITE_API_URL || "https://tripbuddy-backend-o0txsdwyh-shi-db74.vercel.app/api";
 const A = `${import.meta.env.BASE_URL}assets/`;
 const defaultTrip={destination:"Andhra Pradesh",days:4,budget:18000,pace:"Relaxed",interests:["Heritage","Food","Nature"]};
 const nav=[
