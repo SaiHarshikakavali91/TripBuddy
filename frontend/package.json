@@ -6,7 +6,7 @@
 
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/TripBuddy-SIH2026/",
+    "build": "vite build --base=/TripBuddy/",
     "preview": "vite preview"
   },
 
