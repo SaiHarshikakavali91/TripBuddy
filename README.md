@@ -48,6 +48,8 @@ TripBuddy-SIH2026/
 
 ## Run locally
 
+website link: http://localhost:5173/
+
 ### Backend
 
 ```bash
